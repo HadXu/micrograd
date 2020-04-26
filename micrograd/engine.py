@@ -76,7 +76,7 @@ class Value:
         for v in reversed(topo):
             v._backward()
 
-        print(topo)
+        # print(topo)
 
     def __neg__(self):  # -self
         return self * -1
@@ -100,4 +100,4 @@ class Value:
         return other * self ** -1
 
     def __repr__(self):
-        return f"Value(data={self.data}, grad={self.grad}, pre={self._prev})"
+        return f"Value(data={self.data}, grad={self.grad})"
